@@ -1,3 +1,4 @@
+
 const express = require('express')
 const { graphqlHTTP } = require('express-graphql')
 const {
@@ -7,6 +8,10 @@ const {
 } = require('graphql')
 
 const app = express();
+
+const authors = require('./data/authors')
+const books = require('./data/books')
+
 
 const schema = new GraphQLSchema({
     query: new GraphQLObjectType({
